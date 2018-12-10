@@ -1,0 +1,31 @@
+
+
+	
+
+table{
+	
+	empty-cells: hide;
+	width: 30%;
+	table-layout: fixed;
+	
+	
+}
+
+th, td 
+
+{ 
+	height: 10px;
+	padding: 10px
+
+
+}
+tr
+{
+	font-family: Trebuchet MS, sans-serif
+}
+
+body {
+	background-color: lightcyan;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}

@@ -1,0 +1,63 @@
+<!DOCTYPE html/>
+
+<html>
+
+<head>
+<!-- Name: Tristen Spencer
+	 ISAT 340
+	 Section:2
+-->
+<title> Profile </title>
+    <style type="text/css">
+       table {border: 1px solid black;}
+       td {border: 1px solid black;}
+    </style>
+
+</head>
+<style type="text/css">body {background-color: lightcyan;}</style>
+<form action="" method="post">
+	<fieldset>
+		<legend>Profile information:</legend>
+		<table boarder = 2>
+		
+		<p> Please <strong>update</strong> your profile information on the following form <br>
+			<em>All fields are required and must contain valid information </em>
+		</p>
+			<tr>
+				<td>Member ID:</td>
+				<td><input type="text" name="memberID" value= "{{memberID}}" readonly/> </td>
+			</tr>		
+			<tr>
+				<td>First name:</td>
+				<td><input type="text" name="firstname" value= "{{firstname}}"/> </td>
+			</tr>
+			<tr>
+				<td>Last name:</td>
+				<td><input type="text" name="lastname" value= "{{lastname}}"/></td>
+			</tr>
+			<tr>
+				<td>Age</td>
+				<td><input type="integer" name="age" value= "{{age}}"/></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" name="email" value= "{{email}}"/> <i>e.g. user@domain.com</i></td>
+			</tr>
+			<tr>
+				<td><img src = "{{url_for('static',filename='JAcard.jpg')}}" width="110" height="130"></td>
+				<td><input type="text" name="bio" value= "{{bio}}"/></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="Submit"></td>
+			</tr>
+		</table>
+	</fieldset>		
+</form>
+{% if success %}
+	  <h3 style="color:magenta;"> Data successfully submitted to the database!
+	  </h3>
+{% endif %}
+<a href = "/view_all_celebs"> Click to view all of the celebrities</a>
+<br>
+<a href = "/view_one_celeb"> Click to view one celebrity</a>
+</html>
